@@ -1,0 +1,16 @@
+{
+  "name": "scroll-effects",
+  "version": "1.0.0",
+  "description": "To create scroll effect animations",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vercel --prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.3.9"
+  }
+}

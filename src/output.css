@@ -3,6 +3,10 @@
   display: grid;
   place-items: center;
 }
+section {
+  display: flex;
+  flex-direction: column;
+}
 
 .container {
   background-color: rgb(203, 203, 248);
@@ -13,6 +17,7 @@
 
 .section {
   height: 100vh;
+  display: block;
 }
 
 .section-header {
@@ -22,10 +27,10 @@
 }
 
 .items {
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10rem;
   gap: 2rem;
   font-size: 1.5rem;
 }
@@ -40,25 +45,55 @@
   height: 20vh;
   display: grid;
   place-items: center;
+  width: 100vw;
+  display: block;
+  padding-top: 25%;
 }
 
 /* transition effect */
 
-.hidden {
+.sec2-flexing {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+  justify-content: space-between;
+}
+
+.sec2-flexing img {
+  display: block;
+}
+
+.text {
+  width: 50%;
+}
+
+
+.fade-in {
   opacity: 0;
-  filter: blur(5px);
-  transform: tranlateX(-100%);
-  transition: all 3s;
+  transition: opacity 250ms ease-in;
 }
 
-.show {
+.fade-in.appear {
   opacity: 1;
-  transform: translateX(0);
-  filter: blur(0);
 }
 
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
+.from-left {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.from-right {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.from-left,
+.from-right {
+  transition: all 400ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
 }

@@ -13,5 +13,11 @@ export default {
     outDir: "../dist",
     emptyOutDir: true,
     sourcemap: true,
+    rollupOptions: {
+      input: {
+        index: "/index.html",
+        nested: "/nested/link.html",
+      },
+    },
   },
 };
